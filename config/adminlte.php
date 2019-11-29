@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'MoneyAPP',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -30,12 +30,12 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>Money</b>APP',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image-xl',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'AdminLTE',
+    'logo_img_alt' => 'MoneyAPP',
 
     /*
     |--------------------------------------------------------------------------
@@ -173,6 +173,7 @@ return [
     */
 
     'menu' => [
+        /*
         [
             'text' => 'search',
             'search' => true,
@@ -190,12 +191,14 @@ return [
             'label'       => 4,
             'label_color' => 'success',
         ],
-        ['header' => 'account_settings'],
+        */
+        ['header' => 'Perfil'],
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
+            'text' => 'Minha Conta',
+            'url'  => 'profile',
             'icon' => 'fas fa-fw fa-user',
         ],
+        /*
         [
             'text' => 'change_password',
             'url'  => 'admin/settings',
@@ -239,18 +242,17 @@ return [
                 ],
             ],
         ],
-        ['header' => 'labels'],
+        */
+        ['header' => 'Operações'],
         [
-            'text'       => 'important',
+            'text'       => 'Sacar',
             'icon_color' => 'red',
+            'url'  => 'withdraw',
         ],
         [
-            'text'       => 'warning',
+            'text'       => 'Depositar',
             'icon_color' => 'yellow',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'aqua',
+            'url'  => 'deposit',
         ],
     ],
 

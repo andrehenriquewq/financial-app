@@ -152,6 +152,24 @@
             <div class="container">
             @endif
 
+            <div class="row">
+                <div class="col-md-12">
+                    @if(Session::has('message_error'))
+                    <div class="alert alert-danger alert-dismissible">
+                        <h4>Erro!</h4>
+                        <p>{{ Session::get('message_error') }}</p>
+                    </div>
+                    @endif
+                    
+                    @if(Session::has('message_success'))
+                    <div class="alert alert-success alert-dismissible">
+                        <h4>Sucesso!</h4>
+                        <p>{{ Session::get('message_success') }}</p>
+                    </div>
+                    @endif
+                </div>
+            </div>
+
             <div class="content-header">
                 <div class="{{config('adminlte.classes_content_header', 'container-fluid')}}">
                     @yield('content_header')
@@ -159,6 +177,7 @@
             </div>
 
             <div class="content">
+                
                 <div class="{{config('adminlte.classes_content', 'container-fluid')}}">
                     @yield('content')
                 </div>
